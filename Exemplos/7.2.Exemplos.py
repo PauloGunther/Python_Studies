@@ -79,3 +79,4 @@ for c5 in y5:
         if c6.lower().strip() in 'aeiou':
             print(f' {c6}', end = '')
     print('')
+

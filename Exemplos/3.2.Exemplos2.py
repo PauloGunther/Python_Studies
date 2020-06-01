@@ -54,7 +54,7 @@ x3 = int(input('Digite mais um número: '))
 
 if abs(x1-x2) < x3 < x1+x2 and abs(x1-x3) < x2 < x1+x3 and abs(x3-x2) < x1 < x3+x2:
     print('O trinagulo existe!')
-    if x1 == x2 == X3:
+    if x1 == x2 == x3:
         print('Triangulo Equilatero')
     elif x1 == x2 or x3 == x1 or x3 == x2:
         print('Triangulo Isóceles')

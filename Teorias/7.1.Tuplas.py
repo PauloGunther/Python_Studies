@@ -1,4 +1,5 @@
-#MAIS DE UMA VARIAVEL DEFINIDA NO MESMO "ESPAÇO". USAR ()
+#VARIAVEL COMPOSTA
+# MAIS DE UMA VARIAVEL DEFINIDA NO MESMO "ESPAÇO". USAR ()
 
 lanches = ('Hamburguer', 'Batata Frita', 'Pizza', 'Pudim') #isso é uma tupla
 
