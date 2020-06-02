@@ -36,3 +36,84 @@ while True:
         break
 l2.sort()
 print(f'Você digitou {l2}')
+
+print('')    
+print('='*50)
+print('')
+
+#ADICIONAR VALORES NA LISTA EM POSICOES CORRETAS
+
+l3 = []
+for cont in range(0, 5):
+    a3 = int(input('Digite um numero: '))
+    if cont == 0 or a3 > l3[-1]:
+        l3.append(a3)
+        print('Adicionado no final da lista')
+    else:
+        pos = 0
+        while pos < len(l3):
+            if l3[pos] >= a3:
+                l3.insert(pos, a3)
+                break
+            pos += 1
+            
+print(l3)
+print('')    
+print('='*50)
+print('')
+
+
+#ANALISAR LISTA CRIADA
+            
+l4 = []
+while True:
+    l4.append(int(input('Digite um numero: ')))
+    decisao = str(input('Deseja adicionar mais um numero [S/N]: ')) .upper().strip()
+    if decisao == 'N':
+        break
+print(f'Foram digitados {len(l4)} numeros.')
+l4.sort(reverse=True)
+print(f'A lista ordenada de forma decrescente: {l4}')
+if 5 in l4:
+    print('O valor 5 faz parte da lista')
+else:
+    print('O valor 5 nao esta na lista.')
+  
+print('')    
+print('='*50)
+print('')
+
+#LISTA PAR E IMPAR
+l5 = []
+while True:
+    l5.append(int(input('Digite um numero: ')))
+    decisao = str(input('Deseja adicionar mais um numero [S/N]: ')) .upper().strip()
+    if decisao == 'N':
+        break
+lpar = []
+limpar = []
+for contador in l5:
+    if contador % 2 == 0:
+        lpar.append(contador)
+    else:
+        limpar.append(contador)
+
+print(f'A lista padrao: {l5}')
+print(f'A lista par: {lpar}')
+print(f'A lista impar: {limpar}')
+
+print('')    
+print('='*50)
+print('')
+
+#VERIFICAR SE O NUMERO DE PARENTES QUE FECHA E O MESMO QUE ABRE
+
+a1 = str(input('Digite uma exprecao: '))
+print(a1[2])
+
+if a1.count('(') == a1.count(')'):
+    print('Expressao valida')
+else:
+    print('Expressao invalida')
+
+
