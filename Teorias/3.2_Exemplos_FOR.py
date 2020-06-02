@@ -2,7 +2,6 @@
 
 from time import sleep
 import emoji
-
 print('Contagem regressiva em:')
 
 for c in range(5, 0, -1):
@@ -11,13 +10,11 @@ for c in range(5, 0, -1):
 print(emoji.emojize('BOOOOM!:tada:', use_aliases=True))
 
 #TODOS OS NÚMEROS PARES
-
 for c in range(1, 51):
     if c % 2 == 0:
         print(c)
 
-#soma dos multiplos de 3
-
+#SOMA DOS MULTIPLOS DE 3
 s = 0
 for c in range(1, 500):
     if c % 2 != 0 and c % 3 == 0:
@@ -25,7 +22,6 @@ for c in range(1, 500):
 print(s)
 
 #TABUADA
-
 x = int(input('Digite um número: '))
 print('A tabuada desse número é: ')
 for c in range(0, 11):
@@ -40,19 +36,14 @@ for c in range(0, 6):
 print(s)
 
 #MOSTRAR OS 10 PRIMEIROS TERMOS DE UMA PA
-
 a1 = float(input('Digite o primeiro termo da PA: '))
 r = float(input('Digite a razao da PA: '))
-
 for c in range(0,10):
     pa = a1 + r*c
     print(pa)
 
-
 #VERIFICAR SE É PALINDROMO
-
 a = str(input('Digite uma frase: ')) .upper().replace(' ', '')
-
 i = ''
 for c in range(len(a)-1, -1, -1):
     i = i + a[c]
@@ -62,9 +53,7 @@ else:
     print('Nao e palindromo')
 
 #VERIFICAR SE É PRIMO
-
 a = int(input('Digite um número: '))
-
 i = 0
 for c in range(1, a+1):
     b = a % c == 0
@@ -75,7 +64,6 @@ else:
     print('{} é primo!' .format(a))
 
 #QUANTAS PESSOAS ATINGIRAM A MAIORIDADE?
-
 from datetime import date
 sm = 1
 sM = 1
@@ -87,14 +75,11 @@ for c in range(0, 7):
         sM = sM + c
 print('{} pessoas maior de idade\n{} pessoas menor de idade.' .format(sm, sM))
 
-# MAIOR PESO
-
+#MAIOR PESO
 l = []
 for c in range(0, 5):
     p = l.append(float(input('Digite o peso em kg: ')))
 print('O maior peso é {} kg e o menor é {} kg' .format(max(l), min(l)))
-
-
 menor = 0
 maior = 0
 for c in range(0, 6):
@@ -109,7 +94,6 @@ for c in range(0, 6):
             menor = peso
 
 # ANALISADOR COMPLETO
-
 np = 4
 totidade = 0
 mi = 0
@@ -135,7 +119,7 @@ print('A média de idade do grupo é: {}' .format(totidade/np))
 print('O homem mais velho do grupo é {} com {} anos' .format(nhv, mi))
 print('O número de melheres com menos de 20 anos é {}' .format(tm20))
 
-# media de idade
+#MEDIA DE IDADE
 
 np = 4
 totidade = 0

@@ -1,17 +1,14 @@
-#DIGITAR SOMENTE O PEDIDO
-s = 'X'
+#DIGITAR SOMENTE O QUE ESTA SENDO PEDIDO
+s = ''
 while s != 'M' and s != 'F':
     s = str(input('Digite seu sexo [M/F]: ')) .upper().strip()
     if s != 'M' and s != 'F':
         print('Por favor digite novamente!')
-
 print('Sexo computado!')
 
 #MELHORANDO ADIVINHAÇÃO
-
 from random import randint
 from time import sleep
-
 print('Pensarei em um número entre 0 e 10. Tente adivinhar.')
 y = randint(0, 10)
 print('Pensando...')
@@ -27,12 +24,10 @@ while x != y:
         c += 1
 print('Você acertou, após {} tentativas!' .format(c))
 
-#CALCULADORA
-
+#CALCULADORA COM OPÇOES PRO USUARIO
 print('='*10, 'MENU', '='*10)
 a = float(input('Digite um valor: '))
 b = float(input('Digite um segundo valor: '))
-
 o = 0
 while o != 5:
     print('Por favor escolha a opção que preferir:')
@@ -54,30 +49,23 @@ while o != 5:
 print('Até logo!')
 
 #FATORIAL
-
 a = int(input('Digite um valor: '))
 f1 = 1
 for c in range(1, a+1):
     f1 = c*f1
-
 print('O fatorial é ', f1)
-
 a = int(input('Digite um valor: '))
 c = a
 f = 1
 while c > 0:
     f = f * c
     c -= 1
-
 print(f)
 
-
 #PA COM WHILE
-
 a1 = float(input('Digite o primeiro termo: '))
 r = float(input('Digite a razao da PA: '))
 i = float(input('Digite o numero de termos das PA: '))
-
 n = 0
 while n != i:
     pa = a1 + r*n
@@ -95,7 +83,6 @@ else:
     print('Ate logo!')
 
 #DIGITAR ATÉ 999
-
 a=0
 n=0
 tot = 0
@@ -106,7 +93,7 @@ while a != 999:
         tot = a+tot
 print(n,tot)
 
-#MAIOR SOMA MENOR
+#MAIOR, SOMA E MENOR
 x = 0
 s = 0
 c = 1
@@ -128,7 +115,6 @@ while x != 'N':
 print(s/c, maior, menor)
 
 #FIBONACCI
-
 t1 = 0
 t2 = 1
 x = int(input())

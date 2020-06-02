@@ -19,13 +19,11 @@ while True:
         break
     for c2 in range(1, 11):
         r2 = c2 * a2
-        print(f'{a2} x {c2} = {r2}')
-    
+        print(f'{a2} x {c2} = {r2}')   
 print('Tabuada encerrada!')
 
 
 #JOGUE PAR OU IMPAR
-
 print('-' * 40)
 print('VAMOS JOGAR PAR OU IMPAR')
 print('-' * 40)
@@ -49,7 +47,6 @@ while True:
 print(f'GAME OVER! Você venceu {c3} vezes.')
 
 #CADASTRAR PESSSOAS
-
 b4 = c4 = ''
 tot184 = toth4 = totm4 = 0
 while True:
@@ -80,11 +77,9 @@ print(f'E temos {totm4} mulher com menos de 20 anos.')
 
 
 #CADASTRO DE PRODUTOS 
-
 print('-'*30)
 print('{:^30}' .format('LOJA SUPER BARATAO'))
 print('-'*30)
-
 s5 = totmaior5 = tot5 = menor5 = 0
 c5 = nome5 = ''
 while True:
@@ -113,7 +108,6 @@ print(f'Temos {totmaior5} custando mais de R$ 1000.00')
 print(f'O produto mais barato foi {nome5} que custo R${menor5:.2f}')
 
 #CAIXA ELETRONICO
-
 print('-'*30)
 print('{:^30}' .format('CAIXA ELETRONICO'))
 print('-'*30)
