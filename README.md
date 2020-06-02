@@ -1,5 +1,7 @@
 # Python_Studies
- Files to learn and teste
+Olá,
  
- I am learning python by Curso em Video (https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ).
- This repository is a bunch of knowledge and notes that i do during my vacation.
+Esse repósitorio tem como objetivo compilar todo conhecimento, anotações e exercicios feitos durante os meus estudos de python pelo canal do youtube Curso em Video, do excelente professor Guanabara.
+https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ
+ 
+Ainda está em atualização!
