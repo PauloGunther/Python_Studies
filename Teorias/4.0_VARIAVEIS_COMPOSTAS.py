@@ -133,3 +133,61 @@ for c in range(0,3):
 print(principal)
 for p in principal:
     print(f'Printa o nome {p[0]}. Printa a idade {p[1]}')
+
+#======DICIONARIOS=======
+
+#assim como tuplas e listas sao variaveis compostas
+#agora definidas {}
+#serve paa atribuir 'nomes' a espaços nas listas
+
+pessoas = {'nome': 'Paulo', 'sexo': 'M', 'idade': 22} #declarando um dicionario
+#nome é uma chave, paulo é um valor. o conjunto de chaves compoe um item (value>keys>items)
+
+print(pessoas) #ira mostrar o item exatamente como adicionado acima
+print(pessoas['nome']) #ira mostrar o valor atribuido a chave nome
+print(f'O {pessoas["nome"]} tem {pessoas["idade"]} anos') #quando usar o format, precisa usar aspas duplas " pois esta dentro das aspas simples
+
+print(pessoas.items()) #mostra o conjuto completo separando keys em tuplas
+print(pessoas.keys()) #mostra apenas as keys
+print(pessoas.values()) #mostra os valores nas keys
+
+for c in pessoas:
+    print(c) #mostra as keys
+for c in pessoas.keys():
+    print(c) #também mostra as keys
+
+for c in pessoas.values():
+    print(c) #mostra os valores
+for k, v in pessoas.items():
+    print(k, v) #k sera as keys e v os valores. nao precisa de enumarate como nas litas e tuplas
+
+pessoas['nome'] = 'Gustavo' #substitui o valor anterior em nome. nao precisa dar append
+
+estado1 = {'uf': 'Rio de Janeiro', 'sigla':'RJ'}
+estado2 = {'uf': 'São Paulo', 'sigla': 'SP'}
+brasil = []
+
+brasil.append(estado1) #posso adicionar um dicionario dentro de uma lista
+brasil.append(estado2)
+print(brasil) #mostra os dicionarios dentro da lista
+print(brasil[1]) #mostra o dicionario na posição 1
+print(brasil[1]['sigla']) #mostra o valor da chave sigle no dicionário 1
+
+#EXEMPLO
+estado = dict() #criado um diconário
+brasil = list() #criado um lista
+
+for c in range(0,3):
+   estado['uf'] = str(input('Unidade federativa: '))
+   estado['sigla'] = str(input('Sigla: '))
+   brasil.append(estado.copy()) #nao pode usar [:] para criar uma copia de biblioteca. por isso usar .copy()
+for e in brasil:#vai percorrer as bibliotecas de brasil
+    print(e) #mostra biblioteca por biblioteca
+
+for e in brasil: 
+    for k, v in e.items(): #onde k vai ser chaves e v os valores
+        print(f'O chave {k} tem valor {v}') #mostra valores e suas rescpecticas chaves
+
+for e in brasil:
+    for v in e.values():
+        print(v) # mostra todos os valores de todas as chaves
