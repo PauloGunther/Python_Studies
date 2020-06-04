@@ -2,8 +2,10 @@
 aluno = dict()
 aluno['Nome'] = str(input('Nome:'))
 aluno['Media'] = int(input('Media: '))
-if aluno['Media'] > 7:
+if aluno['Media'] >= 7:
     aluno['Situação'] = 'Aprovado'
+elif 5 <= aluno['Media'] < 7:
+    aluno['Situação'] = 'Recuperacao'
 else:
     aluno['Situação'] = 'Reprovado'
 for k, v in aluno.items():
@@ -125,6 +127,7 @@ while True:
         s += p
     jogador['total'] = s
     grupo.append(jogador.copy())
+
     print('-'*50)
     deci = str(input('Deseja continuar? [S/N]: ')) .upper().strip()
     if deci == 'N':
@@ -140,14 +143,14 @@ while True:
     a = int(input('Mostrar os dados de qual jogador: '))
     if a == 999:
         break
-    while len(grupo) <= a or a < 0:
+    if a >= len(grupo):
         print(f'ERRO! \nCódigo {a} não existe. Tente novamente.')
-        a = int(input('Mostrar os dados de qual jogador: '))
-    print(f'LEVANTAMENTO DO JOGADOR: {grupo[a]["nome"]}')
-    partida = 1
-    for c in grupo[a]['gols']:
-        print(f'No jogo {partida} fez {c} gols')
-        partida += 1
+    else:
+        print(f'LEVANTAMENTO DO JOGADOR: {grupo[a]["nome"]}')
+        for i, c in enumerate(grupo[a]['gols']):
+            print(f'No jogo {i+1} fez {c} gols')
+    print('-'*45)        
+
 print()
 print('-'*50)
 print()
