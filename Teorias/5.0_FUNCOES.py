@@ -97,11 +97,93 @@ def contador(i, f, p):  # abrir 3"s para descrever a ajuda da funcao criada
 # agora pode-se:
 help(contador)  # irá mostrar o manual criado no terminal
 
+
 # PARAMETROS OPCIONAIS
+def soma(a=0, b=0, c=0):  # quando igualado a 0 o parametro se torna opocional
+    """
+        Faz a soma de 3 valores e mostra o resultado na tela
+        :param a:
+        :param b:
+        :param c:
+    """
+    s = a + b + c
+    print(f'A soma vale {s}')
 
-def =
+
+soma(2, 4)  # pode-se colocar de 0 a 3 parametros, pois todos são opcionais
+soma(2)
+soma()  # nao dará erro
 
 
+# ESCOPO LOCAL E GLOBAL
+def teste():
+    x = 5  # x é uma variavel de escopo local, pois funcionará apenas dentro da função
+    print(f'O valor de x vale {x}.')
+    print(f'O valor de y vale {y}.')  # variavel global funciona dentro da função
 
 
+y = 10  # variavel escopo global funciona dentro e fora da função
+teste()
+print(f'O valor x é {x}.')  # ERRO pois x é uma variavel local, nao funciona fora do funcao
 
+
+def funcao1():  # podemos ter uma variavel valendo dois valores
+    n1 = 4  # um valor de escopo local
+    print(f'N1 dentro vale {n1}')  # ira printar 4
+
+
+n1 = 2  # um outro valor de escopo global
+print(f'N1 fora vale {n1}')  # ira printar 2
+funcao1(n1)
+
+
+def funcao2(n2):  # não entendi direito
+    global n1  # supostamente é para puxar a valor global de n1
+    n1 = 4
+    n2 = 2*n1
+    print(f'N1 dentro vale {n1}')
+    print(f'N2 dentro valr {n2}')
+
+
+n1 = 2
+print(f'N1 fora vale {n1}')
+funcao2(n1)
+
+
+# RETURN
+def somar(a=0, b=0, c=0):
+    s = a + b + c
+    return s  # dessa forma pode-se manipular a resposta da funcao
+
+
+a1 = somar(2, 3, 5)
+a2 = somar(2, 2)
+a3 = somar(6)
+
+print(f'O valores das somas são {a1}, {a2} e {a3}.')
+
+
+# EXEMPLOS
+def fatorial(num=1):  # se o valor nao for informado assumira valor de 1
+    f = 1
+    for c in range(num, 0, -1):
+        f *= c
+    return f
+
+
+a1 = int(input('Digite um número: '))
+print(f'O fatorial de {a1} vale {fatorial(a1)}.')
+
+
+def par(n=0):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+
+a2 = int(input('Digite um número: '))
+if par(a2):
+    print('É par')
+else:
+    print('É impar')
