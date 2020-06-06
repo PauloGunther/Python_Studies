@@ -1,3 +1,10 @@
+from pacote import dados
+
+a = dados.leiaInt()
+b = dados.leiaFloat()
+print(f'O número inteiro digita foi {a} e o real {b}')
+
+# ACESSANO UM SITE
 import requests
 
 try:
