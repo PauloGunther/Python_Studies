@@ -1,8 +1,11 @@
-import requests
+import aux
 
-try:
-    acesso = requests.get('http://www.pudim.com.br/')
-except:
-    print('\033[1;31mO site pudim não está acessivel no momento.\033[m')
-else:
-    print('\033[1;32mContectado ao site pudim com sucesso!\033[m')
+bd = open('Teorias/bd.txt', 'a')
+
+while True:
+    bd.write(str(input('Nome: ')))
+    idade = aux.leiaInt('Digite sua idade: ')
+    d = input(':')
+    if not d == 's':
+        break
+
