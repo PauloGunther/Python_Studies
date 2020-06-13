@@ -15,15 +15,15 @@ c = n // 100 % 10
 m = n // 1000 % 10
 print('Unidade: {}\nDezena: {}\nCentena: {}\nMilhar: {}' .format(u, d, c, m))
 
-# ANALIZAR SE O NOME DA CIDADE COMEÇA COM SANTO
+# ANALIsAR SE O NOME DA CIDADE COMEÇA COM SANTO
 city = str(input('Digite o nome de sua cidade: ')).split()[0].capitalize()
 print(city == 'Santo')
 
-# ANALIZAR SE HÁ SILVA NO SEU NOME
+# ANALIsAR SE HÁ SILVA NO SEU NOME
 n = str(input('Digite seu nome: ')).title().split()
 print('Silva' in n)
 
-# ANALIZAR POSIÇÕES DE UMA LETRA NUMA FRASE
+# ANALIsAR POSIÇÕES DE UMA LETRA NUMA FRASE
 a1 = str(input('Digite uma frase: ')).lower().lstrip()
 x = a1[0]
 print('A letra {} aparece {} vezes na frase.' .format(x.upper(), a1.count(x)))
